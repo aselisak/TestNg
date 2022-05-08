@@ -1,0 +1,13 @@
+adding a project into github
+1. navigate to working directory inside terminal
+2. run “git init”
+3. use “git status” to check the status of the git processes
+4. “git add . ” to add files/folders to staging area
+5. “git commit -m “commit desc” ” to commit
+6. “git log” to check logs of commits
+7. “git remote -v” to check if connected to a remote repo or not
+8. “git remote add origin url” to add local repo to remote origin
+9. check if connected by step 7
+10. “git push -u origin main” to change to main branch
+11. “git push -u origin main” to push the commited codes to github
+12. “git status” to check if anything is left
