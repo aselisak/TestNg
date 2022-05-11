@@ -84,6 +84,36 @@ at the end you must do
 3.soft.AssertAll().
 after declaration when we use sof.assert it just checks
 
+class 02
+TestNg XML
+<suite>
+        <test>
+        <classes>
+           <class>
+                <method>
+               </method>
+               </class>
+             </classes>
+
+             <packages>
+          </package>
+        </test>
+</suite>
+
+@BeforeClass
+this annotation is used to execute the only once before the execution of the class
+@AfterClass
+this annotation is used to execute the only once after the execution of the class
+
+@BeforeTest
+this annotation is used to execute the method only once before the execution of the class
+
+whenever we run by groups
+the @beforeMethod and @afterMethod do nut run because they are not under the tag of groups
+
+when we ran by method name
+@beforeMethod and afterMethod
+
 
 
 

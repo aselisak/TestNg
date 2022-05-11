@@ -6,18 +6,18 @@ import org.testng.annotations.Test;
 
 public class BasicAnnotations {
 
-    @Test
-    public void firstTest(){
+    @Test(groups = "smoke")
+    public void cfirstTest(){
         System.out.println("This is my first testcase");
     }
 
     @Test
-    public void secondTest(){
+    public void asecondTest(){
         System.out.println("This is my second testcase");
     }
 
     @Test
-    public void thirdTest(){
+    public void bthirdTest(){
         System.out.println("This is my third testcase");
     }
 

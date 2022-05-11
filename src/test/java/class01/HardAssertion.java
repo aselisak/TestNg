@@ -26,7 +26,7 @@ public class HardAssertion {
 
     @Test
     public void VerifyCredentials(){
-        String expectedText = "Invalid credentials 123";
+        String expectedText = "Invalid credentials";
         WebElement username = driver.findElement(By.id("txtUsername"));
         username.sendKeys("123456");
         driver.findElement(By.id("txtPassword")).sendKeys("123456");
