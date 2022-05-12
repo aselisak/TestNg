@@ -1,4 +1,4 @@
-package class01;
+package class03;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class SoftAssertion {
+public class LoginTest {
     WebDriver driver;
     @BeforeMethod(alwaysRun = true)
     public void openBrowser() {
@@ -30,8 +30,6 @@ public class SoftAssertion {
         driver.findElement(By.id("txtPassword")).sendKeys("123456");
         driver.findElement(By.id("btnLogin")).click();
         String text = driver.findElement(By.id("spanMessage")).getText();
-
-        //assertion to make sure that message is correct
         soft.assertEquals(text,expectedText);
 
 
@@ -44,13 +42,40 @@ public class SoftAssertion {
         soft.assertAll();
 
     }
-    @Test(groups = "smoke")
-    public void loginTest2(){
-        System.out.println("i am test for login under smoke");
+
+
+    @Test(groups = "regression")
+    public void VerifyCredentials1() throws InterruptedException {
+
+        SoftAssert soft = new SoftAssert();
+
+        String expectedText = "Invalid credentials";
+        WebElement username = driver.findElement(By.id("txtUsername"));
+        username.sendKeys("123456");
+        Thread.sleep(2000);
+        boolean displayed =username.isDisplayed();
+        driver.findElement(By.id("txtPassword")).sendKeys("123456");
+        Thread.sleep(2000);
+        driver.findElement(By.id("btnLogin")).click();
+        Thread.sleep(2000);
+        String text = driver.findElement(By.id("spanMessage")).getText();
+        soft.assertEquals(text,expectedText);
+
+
+        //validate to display is true or not
+        System.out.println("Hello world");
+        soft.assertTrue(displayed);
+
+        //check all assertions
+
+        soft.assertAll();
+
     }
-        @AfterMethod(alwaysRun = true)
-        public void closeBrowser() {
-            driver.quit();
-        }
+
+    @AfterMethod(alwaysRun = true)
+    public void closeBrowser1() {
+        driver.quit();
     }
+}
+
 
