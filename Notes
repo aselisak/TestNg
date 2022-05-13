@@ -173,7 +173,7 @@ for greater one use excel
 
 if we want to declare our data set it must be under @dataprovider
 
-if we want our test case to utilize this dataprovider
+if we want our test case to utilize this dataproviderwe don't need a main method with
 what do we need to do?
 @test(dataprovider="name of dataprovider")
 public void test(){
